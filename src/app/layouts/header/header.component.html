@@ -1,0 +1,55 @@
+<header class="border-b w-full sm:w-full md:w-full lg:w-full xl:w-full bg-primary
+               h-auto md:h-auto lg:h-auto xl:h-auto p-2">
+    <div class="header-items flex justify-between items-center">
+        <div class="logo">
+            <ul>
+                <li class="list-none flex">
+                    <a class=" border-y text-[4.2vw] md:font-medium md:uppercase tracking-wider font-medium cursor-pointer
+                     font-roboto sm:text-[3.6vw] md:text-[2.3vw] lg:text-[2vw] xl:text-[1.6vw] 2xl:text-[2vw]">Blog</a>
+                </li>
+            </ul>
+        </div>
+        <div class="navbar w-full hidden md:block" role="navigation">
+            <nav>
+                <ul class="flex justify-center items-center gap-4">
+                    <li class="list-none">
+                        <a class="text-[1.12vw ] border-y p-1 md:text-[1.5vw] md:font-medium lg:text-[1vw] xl:text-[1vw] uppercase tracking-wider font-light cursor-pointer  font-roboto">Home</a>
+                    </li>
+                    <li class="list-none">
+                        <a class="text-[1.12vw]  border-y p-1 md:text-[1.5vw] md:font-medium lg:text-[1vw] xl:text-[1vw] uppercase tracking-wider font-light cursor-pointer  font-roboto">Category</a>
+                    </li>
+                    <li class="list-none">
+                        <a class="text-[1.12vw]  border-y p-1 md:text-[1.5vw] md:font-medium lg:text-[1vw] xl:text-[1vw] uppercase tracking-wider font-light cursor-pointer  font-roboto">Contact</a>
+                    </li>
+
+                    <li class="list-none">
+                        <a class="text-[1.12vw]  border-y p-1 md:text-[1.5vw] md:font-medium lg:text-[1vw] xl:text-[1vw] uppercase tracking-wider font-light cursor-pointer  font-roboto">About</a>
+                    </li>
+
+                    <li class="list-none">
+                        <a class="text-[1.12vw]  border-y p-1 md:text-[1.5vw] md:font-medium lg:text-[1vw] xl:text-[1vw] uppercase tracking-wider font-light cursor-pointer  font-roboto">SignIn</a>
+                    </li>
+                    <li class="list-none">
+                        <a class="text-[1.12vw]  border-y p-1 md:text-[1.5vw] md:font-medium lg:text-[1vw] xl:text-[1vw] uppercase tracking-wider font-light cursor-pointer  font-roboto">SignUp</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="search-bar" role="search">
+            <form>
+                <label for="search"></label>
+                <input class=" border p-[4px] hidden md:block md:p-2 md:w-[250px] md:rounded-md lg:block xl:block
+                 rounded-md outline-none w-[210px] placeholder:font-roboto placeholder:text-[4.5vw]
+                 md:placeholder:text-[2vw] lg:placeholder:text-[1.8vw] xl:placeholder:text-[1.2vw]"
+                  type="search" name="search" id="search" placeholder="search blog post🌍">
+            </form>
+        </div>
+        <div class="mobile-menu block md:hidden lg:hidden xl:hidden">
+            <ul>
+                <li class="list-none">
+                    <button type="menu"><img class="w-9 md:w-5 object-cover" src="{{menuIconUrl}}" alt=""></button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
