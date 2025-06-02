@@ -5,6 +5,7 @@ module.exports = {
   ],
   theme: {
     screens: {
+      'xsm' : '480px',
       'sm': '640px',
       'md': '768px',
       'lg': '1024px',
@@ -13,7 +14,9 @@ module.exports = {
     },
     colors: {
       'primary': '#e7d7c1',
-      'secondary' : "#ffe5d9"
+      'secondary' : "#ffe5d9",
+      'postpage-bg' : "#e9ecef",
+      'subscrib' : '#c2c5aa',
     },
     fontFamily: {
       sans: ['Graphik', 'sans-serif'],
