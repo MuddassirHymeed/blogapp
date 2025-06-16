@@ -1,4 +1,4 @@
-<header class="border-b w-full sm:w-full md:w-full lg:w-full xl:w-full  bg-subscrib fixed top-0
+<header class="border-b w-full sm:w-full md:w-full lg:w-full xl:w-full  bg-subscrib fixed top-0 z-50 overflow-hidden
                h-auto md:h-auto lg:h-auto xl:h-auto p-2">
     <div class="header-items flex justify-between items-center">
         <div class="logo pl-2">
@@ -15,13 +15,13 @@
                 <ul class="flex justify-center items-center gap-4">
                     <li class="list-none">
                         <a  routerLink="/home" routerLinkActive="active"
-                        class="text-[1.12vw ] p-[1px] md:text-[1.5vw] md:font-medium lg:text-[1vw] xl:text-[1vw]
+                        class="text-[1.12vw ] p-[1px] md:text-[1.5vw] md:font-medium lg:text-[1vw] xl:text-[1vw] 
                          uppercase tracking-wider font-light cursor-pointer  font-roboto">Home</a>
                     </li>
                     <li class="list-none">
                         <a  routerLink="/blog" routerLinkActive="active"
                         class="text-[1.12vw] p-[1px] md:text-[1.5vw] md:font-medium lg:text-[1vw] xl:text-[1vw]
-                         uppercase tracking-wider font-light cursor-pointer  font-roboto">Blogs</a>
+                         uppercase tracking-wider font-light cursor-pointer  font-roboto">Blog</a>
                     </li>
                     <li class="list-none">
                         <a  routerLink="/contact" routerLinkActive="active"
@@ -51,12 +51,16 @@
             </nav>
         </div>
         <div class="search-bar pr-2" role="search">
-            <form>
+            <form class="flex justify-center items-center gap-3 pr-4">
                 <label for="search"></label>
                 <input class=" border p-[4px] hidden md:block md:p-2 md:w-[250px] md:rounded-md lg:block xl:block
-                 rounded-md outline-none w-[210px] placeholder:font-roboto placeholder:text-[4.5vw]
-                 md:placeholder:text-[2vw] lg:placeholder:text-[1.8vw] xl:placeholder:text-[1.2vw]"
-                  type="search" name="search" id="search" placeholder="search blog post 🔍">
+                 rounded-md outline-none w-[110px] placeholder:font-roboto placeholder:text-[4.5vw]
+                 md:placeholder:text-[2vw] lg:placeholder:text-[1.4vw] xl:placeholder:text-[1vw]"
+                  type="search" name="search" id="search" placeholder="search blog Posts...">
+                  <div class="search-button">
+                    <button class="hidden xsm:hidden sm:hidden md:block 
+                     px-6 py-2 bg-primary rounded-md" type="button">Search</button>
+                  </div>
             </form>
         </div>
         <div class="mobile-menu block md:hidden lg:hidden xl:hidden">

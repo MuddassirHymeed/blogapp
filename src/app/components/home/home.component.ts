@@ -1,15 +1,20 @@
-import { Component } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
 import { SubscriptionFormComponent } from '../subscription-form/subscription-form.component';
-import { PostCardComponent } from '../../layouts/post-card/post-card.component';
 import { HeroBannerComponent } from '../../layouts/hero-banner/hero-banner.component';
-
+import { PostsComponent } from '../posts/posts.component';
 @Component({
   selector: 'app-home',
-  imports: [HeroBannerComponent , SubscriptionFormComponent ,PostCardComponent],
+  imports: [ HeroBannerComponent ,
+            SubscriptionFormComponent ,
+            PostsComponent , 
+            SubscriptionFormComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
-export class HomeComponent {
+
+export class HomeComponent implements OnInit {
+  constructor() {}
+  ngOnInit(): void {
+  }
 
 }

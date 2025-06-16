@@ -1,0 +1,15 @@
+label{
+    font-size : 18px;
+    letter-spacing : 1px;
+    color: black;
+}
+
+input{
+    font-size : 17px;
+    letter-spacing : 1px;
+    color: black;
+}
+
+textarea{
+    color : black;
+}

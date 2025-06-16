@@ -1,33 +1,24 @@
-<div class="home-component bg-postpage-bg">
+<main class="home-component bg-postpage-bg">
+
     <div class="banner-component">
-       <app-hero-banner></app-hero-banner>
+        <app-hero-banner></app-hero-banner>
     </div>
-    <div class="latest-post-section w-full sm:w-full md:w-full lg:w-full xl:w-full 2xl:w-full h-auto p-10 ">
-        <section class="display-all-posts border-b border-t border-[black]">
+
+    <div class="latest-post-section w-full sm:w-full md:w-full lg:w-full xl:w-full 2xl:w-full h-auto p-4 ">
+        <section class="display-all-posts border-b border-[black]">
             <div class="wrapper flex flex-col justify-center items-center gap-3 ">
                 <div class="heading-posts p-1">
-                    <h2 class="font-roboto font-light tracking-widest text-[4.5vw]
+                    <h2 class="font-roboto font-bold tracking-widest text-[4.5vw]
                 sm:text-[4vw] md:text-[3.8vw] lg:text-[3.6vw] xl:text-[2.8vw] 2xl:text-[2.6vw]">Latest Posts</h2>
                 </div>
                 <div class="introduction-posts p-1">
                     <p class="font-roboto font-light tracking-wide text-[4.2vw] text-center
                 sm:text-[3.2vw] md:text-[2.8vw] lg:text-[2vw] xl:text-[1.4vw] 2xl:text-[1.4vw] ">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, repellat?</p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, repellat?</p>
                 </div>
-                <div class="show-all-posts postcategory w-full 
-             sm:w-full md:w-full
-              lg:w-full xl:w-full 2xl:w-full p-5
-              flex justify-center items-center 
-              gap-12 sm:gap-10 md:gap-6 lg:gap-6 xl:gap-5
-              flex-wrap  rounded-md">
-                    <app-post-card></app-post-card>
-                    <app-post-card></app-post-card>
-                    <app-post-card></app-post-card>
-                    <app-post-card></app-post-card>
-                    <app-post-card></app-post-card>
-                    <app-post-card></app-post-card>
-                    <app-post-card></app-post-card>
-                    <app-post-card></app-post-card>
+                <div class=" show-all-posts-in-latest-section p-2">
+                    <app-posts class="flex justify-center items-center  gap-12 sm:gap-10 md:gap-6 lg:gap-6 xl:gap-5 flex-wrap  rounded-md">
+                    </app-posts>
                 </div>
             </div>
             <div class="call-more-tasks flex justify-center items-center p-5">
@@ -36,12 +27,14 @@
                 text-[3.6vw] xsm:text-[3vw] sm:text-[2.6vw] 
                 md:text-[2.2vw] lg:text-[1.8vw] xl:text-[1.2vw]
                  ">
-                Load More Posts
-            </button>
+                    Load More Posts
+                </button>
             </div>
         </section>
     </div>
+
     <div class="subscription-form-componenet">
         <app-subscription-form></app-subscription-form>
     </div>
-</div>
+
+</main>

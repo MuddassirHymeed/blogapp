@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-
 interface SocialMedia {
   facebook : string,
   instagram : string,
@@ -13,8 +12,8 @@ interface SocialMedia {
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.css'
 })
-export class FooterComponent {
 
+export class FooterComponent {
   public SocialmediaUrl : SocialMedia = { 
     facebook : "assets/media-icons/facebook.png",
     instagram : "assets/media-icons/insta.png",

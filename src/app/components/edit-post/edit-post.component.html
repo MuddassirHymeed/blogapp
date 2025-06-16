@@ -1,0 +1,85 @@
+<section class="add-new-post w-full bg-[#E9ECEF] mt-14" role="contentinfo" aria-label="blog-form">
+    <div class="flex flex-col gap-5 items-center justify-center p-5 bg-[#f8f9fa] ">
+        <div class="main-heading p-2">
+            <h1 class="text-[5vw] p-2 tracking-wider font-roboto font-light
+             xsm:text-[5vw] sm:text-[4.4vw] md:text-[3.3vw]
+             lg:text-[3vw] xl:text-[2.2vw] 2xl:text-[2.3vw]
+            ">Edit blog Post</h1>
+        </div>
+        <div class=" w-full max-w-[900px] bg-white">
+
+            <form (ngSubmit)="OnUpdatePost()" class="shadow-md rounded-xl p-10 bg-[#ffffff] border">
+
+                <div class="mb-5">
+                    <label for="title" class="mb-3 block font-roboto font-light text-[#07074D]"> Title </label>
+                    <input [(ngModel)]="EditPostPorperties.title" type="text" name="title" id="title" class="w-full rounded-md border border-[#e0e0e0]
+                    bg-white py-3 px-6 font-roboto font-light text-[#6B7280]
+                    outline-none focus:border-[#6A64F1] focus:shadow-md" />
+                </div>
+
+                <div class="mb-5">
+                    <label for="description" class="block mb-2 text-sm font-roboto font-light
+                        text-gray-900 dark:text-white">Description</label>
+                    <textarea name="description" id="description" [(ngModel)]="EditPostPorperties.description" rows="4"
+                        class="w-full rounded-md border  border-[#e0e0e0] bg-white
+                         py-3  font-roboto font-light text-[#6B7280] outline-none
+                          focus:border-[#6A64F1] focus:shadow-md">
+                    </textarea>
+                </div>
+
+                <div class="mb-5">
+                    <label for="blogcategory" class="
+                        block mb-2 text-sm font-roboto font-light
+                        text-gray-900 dark:text-white">Category
+                    </label>
+                    <select [(ngModel)]="EditPostPorperties.blogcategory" name="blogcategory" id="blogcategory" class="w-full rounded-md border  border-[#e0e0e0] bg-white
+                         py-3  font-roboto font-light text-[#6B7280] outline-none
+                          focus:border-[#6A64F1] focus:shadow-md">
+                        <option class="focus:border-[#6A64F1]" value="Health">Health</option>
+                        <option class="focus:border-[#6A64F1]" value="Tech">Tech</option>
+                        <option class="focus:border-[#6A64F1]" value="Gaming">Gaming</option>
+                        <option class="focus:border-[#6A64F1]" value="Food">Food</option>
+                        <option class="focus:border-[#6A64F1]" value="Lifestyle">lifestyle</option>
+                        <option class="focus:border-[#6A64F1]" value="Fashion">Fashion</option>
+                    </select>
+                </div>
+
+                <div class="mb-5">
+                    <label class="mb-3 block font-roboto font-light text-[#07074D]" for="choosefile">
+                        Upload file
+                        <span *ngIf="EditPostPorperties.image" class="text-sm text-gray-500">(Current image will be
+                            replaced)</span>
+                    </label>
+                    <input name="choosefile" class="w-full rounded-md border border-[#e0e0e0]
+       bg-white py-3 px-2 text-base font-medium text-[#6B7280]
+       outline-none focus:border-[#6A64F1] focus:shadow-md" aria-describedby="file_input_help" id="choosefile"
+                        type="file" (change)="onFileSelected($event)" #fileInput>
+
+                    <div *ngIf="selectedFile && !isUploading" class="mt-2">
+                        <p class="text-sm text-gray-600">New Image Preview:</p>
+                        <img [src]="selectedFilePreview" alt="New image preview" class="mt-1 max-h-36">
+                    </div>
+
+                    <div *ngIf="EditPostPorperties.image && !selectedFile" class="mt-2">
+                        <p class="text-sm text-gray-600">Current Image:</p>
+                        <img [src]="EditPostPorperties.image" alt="Current post image" class="mt-1 max-h-36">
+                    </div>
+                </div>
+
+                <div class="tinymsc_editor-for-blog-post mb-5">
+                    <editor name="blogeditor" id="blogeditor" [(ngModel)]="EditPostPorperties.blogeditor"
+                        apiKey="i9swmx02unj5v8xr1k4xzizirxoz0jzlh0f5znksk93q35j1" [init]="init" />
+                </div>
+
+                <div class="create-post-button flex justify-center items-center ">
+                    <button type="submit" id="submit"
+                        class="hover:shadow-form rounded-md bg-[#E7D7C1]
+                         py-3 px-8 text-center max-w-[250px] text-base font-roboto hover:bg-[#CBC0D3] font-light text-white outline-none">
+                        Update Post
+                    </button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</section>

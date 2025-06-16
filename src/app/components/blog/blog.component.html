@@ -1,4 +1,4 @@
-<div class="blogs-post-section w-full h-auto  mt-10" aria-label="section">
+<div class="blogs-post-section w-full h-auto  mt-10 mb-10" aria-label="section">
     <section class="blogs-post-items">
         <div class="section-intro flex justify-center items-start gap-1 flex-col p-10
        bg-[#cbc0d3]
@@ -12,29 +12,18 @@
             <div class="blogs-post-intro">
                 <p class="font-roboto font-light
                  text-[4vw] xsm:text-[4vw] sm:text-[3.4vw]
-                  md:text-[2.2vw] lg:text-[1.4vw] xl:text-[1.5vw] ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, aperiam!</p>
+                  md:text-[2.2vw] lg:text-[1.4vw] xl:text-[1.5vw] ">share their thoughts, ideas, opinions or information📱</p>
             </div>
         </div>
 
-        <div class="display-posts-blogs p-5 mt-10
-        flex justify-center items-center gap-10 flex-wrap ">
-            <div class="post-type">
-                <app-post-card></app-post-card>
+        <div class="show-all-posts-in-blog-page p-4">
+            <div class="add-pst-page p-5 flex justify-center items-center gap-4 mb-4">
+                <a [routerLink]="['/blog/create']"
+                 class="px-5 py-3 text-[white] cursor-pointer bg-[#2a6f97] rounded-md font-roboto font-medium tracking-wider hover:bg-[#01497c]">Add a New Post</a>
             </div>
-            <div class="post-type">
-                <app-post-card></app-post-card>
-            </div>
-            <div class="post-type">
-                <app-post-card></app-post-card>
-            </div>
-            <div class="post-type">
-                <app-post-card></app-post-card>
-            </div>
-            <div class="post-type">
-                <app-post-card></app-post-card>
-            </div>
-            <div class="post-type">
-                <app-post-card></app-post-card>
+            <div class="post flex justify-center items-center gap-5 flex-wrap">
+               <app-posts class="flex justify-center items-center  gap-12 sm:gap-10 md:gap-6 lg:gap-6 xl:gap-5 flex-wrap  rounded-md">
+            </app-posts>
             </div>
         </div>
     </section>

@@ -1,0 +1,52 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "Teaching women in Africa coding while studying in California",
+      "description": "Gloria Tumushabe, a Ugandan, is putting her two degrees in computer science to good use. While finishing her Master's in California during the COVID-19 pandemic.",
+      "blogcategory": "Tech",
+      "image": "https://i.ibb.co/KZWs4G0/tech.webp",
+      "blogeditor": ""
+    },
+    {
+      "id": "2",
+      "title": "Developing farming tech to target weeds and reduce herbicide usage",
+      "description": "Jen Selby is a Machine Learning Engineer at Blue River Technology, a company specializing in computer vision and robotics. It develops farm machinery.",
+      "blogcategory": "Lifestyle",
+      "image": "https://i.ibb.co/k2T2bXVY/fashion.jpg",
+      "blogeditor": ""
+    },
+    {
+      "id": "3",
+      "title": "Blending fashion and tech while being a Black Cosplay role model",
+      "description": "Ginger Burton adored Sailor Moon, the anime character, as a child and loved playing with Barbies. Her love of fashion and design led her to pursue fashion, Sailor Moon.",
+      "blogcategory": "Fashion",
+      "image": "https://i.ibb.co/JRKKTxBb/ai-gen-post.webp",
+      "blogeditor": ""
+    },
+    {
+      "id": "4",
+      "title": "Helping to coordinate the COVID-19 healthcare response in her community",
+      "description": "Coty Snider, a public health nurse based in the Kitchener-Waterloo region of Canada, talks about being part of the team which is coordinating the COVID-19 healthcare response ",
+      "blogcategory": "Health",
+      "image": "https://i.ibb.co/TxvR6Lnb/post5.png",
+      "blogeditor": ""
+    },
+    {
+      "id": "5",
+      "title": "Promoting Gaming and Game Design as the Skills of the Future...For Everyone",
+      "description": "JP van Seventer, Managing Director of Dutch Game Garden in The Netherlands, explains his work helping gaming startups and independent game developers create successful companies.",
+      "blogcategory": "Gaming",
+      "image": "https://i.ibb.co/Kczrkhh8/gaming.webp",
+      "blogeditor": ""
+    },
+    {
+      "id": "6",
+      "title": "Using tech and discarded bananas to develop new food products in Brazil",
+      "description": "Fabricio Goulart is a Brazilian chef/entrepreneur who is passionate about reimagining food production to create less food waste. He has combined his background in food services, IT and business to launch",
+      "blogcategory": "Food",
+      "image": "https://i.ibb.co/DHM9grxb/food.png",
+      "blogeditor": ""
+    }
+  ]
+}

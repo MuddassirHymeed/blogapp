@@ -1,25 +1,44 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
-import { AboutComponent } from './components/about/about.component';
-import { ContactComponent } from './components/contact/contact.component';
-import { SubscriptionFormComponent } from './components/subscription-form/subscription-form.component';
-import { PostCardComponent } from './layouts/post-card/post-card.component';
-import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
-import { HeroBannerComponent } from './layouts/hero-banner/hero-banner.component';
 import { BlogComponent } from './components/blog/blog.component';
-
+import { ContactComponent } from './components/contact/contact.component';
+import { AboutComponent } from './components/about/about.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { AddNewPostComponent } from './components/add-new-post/add-new-post.component';
+import { EditPostComponent } from './components/edit-post/edit-post.component';
 
 export const routes: Routes = [
-    {path : '' , redirectTo : '/home', pathMatch : "full"},
-    {path : 'home' , component : HomeComponent},
-    {path : 'blog' , component : BlogComponent},
-    {path : 'contact' , component : ContactComponent},
-    {path : 'about' , component : AboutComponent},
-    {path : '**' , component : PageNotFoundComponent}
+    {
+        path : '' , redirectTo : '/home' , pathMatch : 'full'
+    },
+    {
+        path : '' , component : HomeComponent
+    },
+    {
+        path : 'home' , component : HomeComponent
+    },
+    {
+        path : 'blog' , component : BlogComponent
+    },
+    {
+        path : 'blog/create', component : AddNewPostComponent
+    },
+    {
+        path : 'blog/edit/:id' , component : EditPostComponent
+    },
+    {
+        path : 'contact' , component : ContactComponent
+    },
+    {
+        path : 'about' , component : AboutComponent
+    },
+    {
+        path : '**' , component : PageNotFoundComponent
+    },
 ];
 
 export const routingNavigationComponents = [
     HomeComponent, BlogComponent, AboutComponent,
-    ContactComponent,HeroBannerComponent,SubscriptionFormComponent,
-    PostCardComponent,PageNotFoundComponent,
+    ContactComponent, PageNotFoundComponent ,
+    AddNewPostComponent,EditPostComponent
 ]
