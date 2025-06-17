@@ -1,0 +1,58 @@
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+.prose {
+  line-height: 1.6;
+}
+.prose img {
+  border-radius: 0.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.prose p {
+  margin-bottom: 1.25em;
+}
+.prose h2, .prose h3 {
+  margin-top: 1.5em;
+  margin-bottom: 0.75em;
+  font-weight: 600;
+}
+
+/* Make TinyMCE content responsive */
+.prose {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.prose img {
+  max-width: 100%;
+  height: auto;
+}
+
+.prose table {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  display: block;
+}
+
+.prose iframe {
+  max-width: 100%;
+}
+
+/* Responsive typography */
+.prose p, .prose li, .prose td, .prose th {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .prose p, .prose li, .prose td, .prose th {
+    font-size: 0.9rem;
+  }
+}

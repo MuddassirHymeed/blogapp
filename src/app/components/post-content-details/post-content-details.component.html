@@ -1,0 +1,47 @@
+<div class="post-content-detail-conatiner max-w-3xl mx-auto px-4 py-8 mt-[12vw] sm:mt-[8vw]  xl:mt-[4vw]">
+
+    <div *ngIf="isLoading" class=" show-loader-spinner flex flex-col items-center justify-center min-h-[50vh]">
+        <div class="w-12 h-12 border-4 border-blue-500 border-t-[#CBC0D3] rounded-full animate-spin"></div>
+        <p class="mt-4 text-gray-600">Loading post...</p>
+    </div>
+
+    <div *ngIf="error && !isLoading" class="no-post-show-error bg-red-50 border-l-4 border-red-500 p-4 mb-6 rounded">
+        <div class="flex items-center">
+            <svg class="h-5 w-5 text-red-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+                    clip-rule="evenodd" />
+            </svg>
+            <p class="text-red-700">{{error}}</p>
+        </div>
+        <button (click)="loadPost()" class="mt-2 text-md text-blue-600 hover:text-blue-800 underline">
+            Try again
+        </button>
+    </div>
+
+    <div *ngIf="post && !isLoading" class="space-y-3 post-content-show">
+        <nav class="flex text-md text-gray-600 mb-4 pt-3 pb-3 navigation-breadcrumb-bar">
+            <a routerLink="/" class="hover:text-blue-600">Home</a>
+            <span class="mx-2">/</span>
+            <a routerLink="/blog" class="hover:text-blue-600">Blog</a>
+            <span class="mx-2">/</span>
+            <span class="text-gray-800 bg-primary rounded-sm">{{post.title}}</span>
+        </nav>
+
+        <div class="post-title-show">
+            <h1 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-5">{{post.title}}</h1>
+        </div>
+
+        <div class="mt-6 post-image-show">
+            <img [src]="post.image" [alt]="post.title" class="w-full h-auto rounded-lg shadow-md">
+        </div>
+
+        <div class="post-desc-show">
+            <p class="text-gray-700 text-lg mt-6">
+                {{post.description}}
+            </p>
+        </div>
+        
+        <div class="prose max-w-none mt-8" [innerHTML]="sanitizedContent"></div>
+    </div>
+</div>

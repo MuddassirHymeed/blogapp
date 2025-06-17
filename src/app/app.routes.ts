@@ -6,6 +6,8 @@ import { AboutComponent } from './components/about/about.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { AddNewPostComponent } from './components/add-new-post/add-new-post.component';
 import { EditPostComponent } from './components/edit-post/edit-post.component';
+import { PostContentDetailsComponent } from './components/post-content-details/post-content-details.component';
+
 
 export const routes: Routes = [
     {
@@ -24,6 +26,9 @@ export const routes: Routes = [
         path : 'blog/create', component : AddNewPostComponent
     },
     {
+        path : 'blog/:id' , component : PostContentDetailsComponent
+    },
+    {
         path : 'blog/edit/:id' , component : EditPostComponent
     },
     {
@@ -40,5 +45,5 @@ export const routes: Routes = [
 export const routingNavigationComponents = [
     HomeComponent, BlogComponent, AboutComponent,
     ContactComponent, PageNotFoundComponent ,
-    AddNewPostComponent,EditPostComponent
+    AddNewPostComponent,EditPostComponent,PostContentDetailsComponent
 ]

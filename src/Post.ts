@@ -4,5 +4,5 @@ export interface PostModel {
     description: string;
     blogcategory: string;
     image: string;
-    blogeditor: any;
+    blogeditor: string;
 }
