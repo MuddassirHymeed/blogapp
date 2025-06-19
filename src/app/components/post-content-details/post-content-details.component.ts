@@ -30,30 +30,38 @@ export class PostContentDetailsComponent implements OnInit {
   }
 
   loadPost(): void {
-    const postId = this.route.snapshot.paramMap.get('id');
-    if (!postId) {
-      this.error = 'Post ID not found';
-      this.isLoading = false;
-      return;
-    }
+  const postId = this.route.snapshot.paramMap.get('id');
+  
+  if (!postId) {
+    this.error = 'Post ID not found in URL';
+    this.isLoading = false;
+    this.post = null;
+    return;
+  }
 
-    this.isLoading = true;
-    this.error = null;
+  this.isLoading = true;
+  this.error = null;
 
-    this.postService.getPostID(postId).subscribe({
-      next: (post) => {
+  this.postService.getPostID(postId).subscribe({
+    next: (post) => {
+      if (!post) {
+        this.error = 'Post not found';
+        this.post = null;
+      } else {
         this.post = post;
-        // Add null check for blogeditor
         this.sanitizedContent = post.blogeditor 
           ? this.sanitizer.bypassSecurityTrustHtml(post.blogeditor)
           : null;
-        this.isLoading = false;
-      },
-      error: (err) => {
-        this.error = 'Failed to load post. Please try again later.';
-        this.isLoading = false;
-        console.error('Error loading post:', err);
       }
-    });
-  }
+      this.isLoading = false;
+    },
+    error: (err) => {
+      this.error = err.status === 404 
+        ? 'Post not found' 
+        : 'Failed to load post. Please try again later.';
+      this.post = null;
+      this.isLoading = false;
+    }
+  });
+}
 }
